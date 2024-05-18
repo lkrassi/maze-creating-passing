@@ -3,14 +3,15 @@
 This project contains two main components: a maze generator and a maze solver. The maze generator creates a random maze using a recursive algorithm and saves it as an image and a text file, while the maze solver uses depth-first search (DFS) to find a path through the maze and saves the solution as an image.
 
 ## Files
-maze_generator.py:
+maze_generation.py:
   - This script generates a maze using a recursive algorithm and saves it as an image and a text file.
 
-maze_solver.py:
+maze_solution.py:
   - This script solves a maze read from a text file using a depth-first search algorithm and saves the solution path as an image.
 
 ## Installation
 Ensure you have Python installed. You will also need the `Pillow` library for image processing. You can install it using pip:
+
 ```
 pip install pillow
 ```
@@ -20,7 +21,7 @@ pip install pillow
 The maze generator can be run from the command line. It accepts several optional arguments to customize the maze's dimensions and output filenames.
 
 ```
-python maze_generator.py --width WIDTH --height HEIGHT --image IMAGE_FILENAME --text TEXT_FILENAME
+python maze_generation.py --width WIDTH --height HEIGHT --image IMAGE_FILENAME --text TEXT_FILENAME
 ```
 
 ## Arguments:
@@ -36,7 +37,7 @@ python maze_generator.py --width WIDTH --height HEIGHT --image IMAGE_FILENAME --
 Generate a maze with a width and height of 25, and save the outputs as "my_maze.png" and "my_maze.txt":
 
 ```
-python maze_generator.py --width 25 --height 25 --image my_maze.png --text my_maze.txt
+python maze_generation.py --width 25 --height 25 --image my_maze.png --text my_maze.txt
 ```
 
 # Maze Solver
@@ -45,7 +46,7 @@ The maze solver reads a maze from a text file, solves it using DFS, and saves th
 
 
 ```
-python maze_solver.py --maze MAZE_FILENAME --output OUTPUT_FILENAME
+python maze_solution.py --maze MAZE_FILENAME --output OUTPUT_FILENAME
 ```
 
 ## Arguments
@@ -59,7 +60,7 @@ python maze_solver.py --maze MAZE_FILENAME --output OUTPUT_FILENAME
 Solve a maze from "my_maze.txt" and save the solution as "my_maze_solution.png":
 
 ```
-python maze_solver.py --maze my_maze.txt --output my_maze_solution.png
+python maze_solution.py --maze my_maze.txt --output my_maze_solution.png
 ```
 
 
